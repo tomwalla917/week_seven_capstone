@@ -3,30 +3,31 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Character Forge - Workshop Starter</title>
+    <title>Dragonrealms</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <main>
       <header>
-        <h1>Character Forge</h1>
+        <h1>Dragon Forge</h1>
         <p>Fill the form and create characters — TypeScript + static site</p>
       </header>
 
       <section id="form-section" class="card">
         <form id="char-form">
           <label>Name: <input name="name" required /></label>
-          <label>Class: <input name="class" required /></label>
+          <label>Type: <input name="type" required /></label>
           <label>Age: <input name="age" type="number" min="0" /></label>
+          <label>Element: <input name="element" required/></label>
           <div class="actions">
-            <button type="submit" id="create">Create Character</button>
+            <button type="submit" id="create">Create Dragon</button>
           </div>
         </form>
       </section>
 
       <section id="list-section">
-        <h2>Your Characters</h2>
-        <div id="characters" class="grid"></div>
+        <h2>Your Dragons</h2>
+        <div id="dragons" class="grid"></div>
       </section>
     </main>
 
