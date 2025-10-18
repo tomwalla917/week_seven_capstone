@@ -16,9 +16,28 @@
       <section id="form-section" class="card">
         <form id="char-form">
           <label>Name: <input name="name" required /></label>
-          <label>Type: <input name="type" required /></label>
+          <label for="type">Choose a Type</label>
+          <select id="type" name="type" required>
+            <option value="">Select</option>
+            <option value="Wyvern">Wyvern</option>
+            <option value="Hydra">Hydra</option>
+            <option value="Wyrm">Wyrm</option>
+          </select>
           <label>Age: <input name="age" type="number" min="0" /></label>
-          <label>Element: <input name="element" required/></label>
+          <label for="element">Choose an Element</label>
+          <select id="element" name="element" required>
+            <option value="">Select</option>
+            <option value="Wind">Wind</option>
+            <option value="Sea">Sea</option>
+            <option value="ICe">Ice</option>
+          </select>
+          <label for="specialAbility">Choose a Special Ability:</label>
+          <select id="specialAbility" name="specialAbility" required>
+            <option value="">Select</option>
+            <option value="Power of a Thousand Suns">Power of a Thousand Suns</option>
+            <option value="Howling Winds of the West">Howling Winds of the West</option>
+            <option value="Burning, Blistering Blizzard">Burning, Blistering Blizzard</option>
+          </select>
           <div class="actions">
             <button type="submit" id="create">Create Dragon</button>
           </div>
@@ -31,6 +50,6 @@
       </section>
     </main>
 
-    <script type="module" src="./dist/index.js"></script>
+    <script type="module" src="./src/index.js"></script>
   </body>
 </html>

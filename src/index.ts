@@ -1,10 +1,11 @@
 class Dragon {
   constructor(
     public name: string,
-    public typ: string,
-    public elmnt: string,
-    public age?: number
-  ) {}
+    public type: string,
+    public element: string,
+    public age?: number,
+    public specialAbility: string,
+  ) { }
 }
 
 const form = document.getElementById('char-form') as HTMLFormElement | null;
@@ -15,9 +16,10 @@ function createCard(c: Dragon) {
   el.className = 'character';
   el.innerHTML = `
     <h3>${escapeHtml(c.name)}</h3>
-    <p><strong>Type:</strong> ${escapeHtml(c.typ)}</p>
+    <p><strong>Type:</strong> ${escapeHtml(c.type)}</p>
     <p><strong>Age:</strong> ${c.age ?? '-'}</p>
-    <p><strong>Element:</strong> ${escapeHtml(c.elmnt)}</p>
+    <p><strong>Element:</strong> ${escapeHtml(c.element)}</p>
+    <p><strong>Special Ability:</strong> ${escapeHtml(c.specialAbility)}</p>
   `;
   return el;
 }
@@ -36,17 +38,18 @@ if (form && list) {
 
     const data = new FormData(form);
     const name = (data.get('name') || '').toString().trim();
-    const type = (data.get('typ') || '').toString().trim();
+    const type = (data.get('type') || '').toString().trim();  // Changed
     const ageRaw = data.get('age');
     const age = ageRaw ? Number(ageRaw) : undefined;
-    const element = (data.get('elmnt') || '').toString().trim();
+    const element = (data.get('element') || '').toString().trim();  // Changed
+    const specialAbility = (data.get('specialAbility') || '').toString().trim();
 
     if (!name) {
       alert('Please enter a name');
       return;
     }
 
-    const dragon = new Dragon(name, type, element, age);
+    const dragon = new Dragon(name, type, element, age, specialAbility);
     const card = createCard(dragon);
     list.prepend(card);
     form.reset();

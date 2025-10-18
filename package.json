@@ -9,8 +9,11 @@
     "dev": "concurrently \"npm:watch\" \"npm:serve\""
   },
   "devDependencies": {
-    "concurrently": "^7.0.0",
-    "live-server": "^1.2.2",
-    "typescript": "^5.0.0"
+    "concurrently": "^7.6.0",
+    "typescript": "^5.0.0",
+    "vite": "^7.1.10"
+  },
+  "dependencies": {
+    "chokidar": "^4.0.3"
   }
 }
