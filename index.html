@@ -1,55 +1,62 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Dragonrealms</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <main>
-      <header>
-        <h1>Dragon Forge</h1>
-        <p>Fill the form and create your dragons</p>
-      </header>
 
-      <section id="form-section" class="card">
-        <form id="char-form">
-          <label>Name: <input name="name" required /></label>
-          <label for="type">Choose a Type</label>
-          <select id="type" name="type" required>
-            <option value="">Select</option>
-            <option value="Wyvern">Wyvern</option>
-            <option value="Hydra">Hydra</option>
-            <option value="Wyrm">Wyrm</option>
-          </select>
-          <label>Age: <input name="age" type="number" min="0" /></label>
-          <label for="element">Choose an Element</label>
-          <select id="element" name="element" required>
-            <option value="">Select</option>
-            <option value="Wind">Wind</option>
-            <option value="Sea">Sea</option>
-            <option value="ICe">Ice</option>
-          </select>
-          <label for="specialAbility">Choose a Special Ability:</label>
-          <select id="specialAbility" name="specialAbility" required>
-            <option value="">Select</option>
-            <option value="Power of a Thousand Suns">Power of a Thousand Suns</option>
-            <option value="Howling Winds of the West">Howling Winds of the West</option>
-            <option value="Burning, Blistering Blizzard">Burning, Blistering Blizzard</option>
-          </select>
-          <div class="actions">
-            <button type="submit" id="create">Create Dragon</button>
-          </div>
-        </form>
-      </section>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dragonrealms</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1>Dragon Forge</h1>
+      <p>Fill the form and create your dragons</p>
+    </header>
+
+    <div class="layout">
+      <aside id="form-section" class="card">
+        <section id="form-section" class="card">
+          <form id="char-form">
+            <label>Name: <input name="name" required /></label>
+            <label for="type">Choose a Type</label>
+            <select id="type" name="type" required>
+              <option value="">Select</option>
+              <option value="Wyvern">Wyvern</option>
+              <option value="Hydra">Hydra</option>
+              <option value="Wyrm">Wyrm</option>
+            </select>
+            <label>Age: <input name="age" type="number" min="0" /></label>
+            <label for="element">Choose an Element</label>
+            <select id="element" name="element" required>
+              <option value="">Select</option>
+              <option value="Wind">Wind</option>
+              <option value="Sea">Sea</option>
+              <option value="ICe">Ice</option>
+            </select>
+            <label for="specialAbility">Choose a Special Ability:</label>
+            <select id="specialAbility" name="specialAbility" required>
+              <option value="">Select</option>
+              <option value="Power of a Thousand Suns">Power of a Thousand Suns</option>
+              <option value="Howling Winds of the West">Howling Winds of the West</option>
+              <option value="Burning, Blistering Blizzard">Burning, Blistering Blizzard</option>
+            </select>
+            <div class="actions">
+              <button type="submit" id="create">Create Dragon</button>
+            </div>
+          </form>
+        </section>
+      </aside>
 
       <section id="list-section">
         <h2>Your Dragons</h2>
         <div id="dragons" class="grid"></div>
       </section>
-    </main>
+    </div>
+  </main>
 
-    <script type="module" src="./src/index.js"></script>
-  </body>
+  <script type="module" src="./src/index.js"></script>
+</body>
+
 </html>

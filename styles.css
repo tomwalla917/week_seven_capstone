@@ -17,6 +17,28 @@ main {
     margin: 0 auto
 }
 
+.layout{
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 2rem;
+    align-items:start;
+}
+aside {
+  position: sticky;
+  top: 2rem; /* Keeps form visible when scrolling */
+}
+
+/* Make it responsive */
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr; /* Stack on mobile */
+  }
+  
+  aside {
+    position: relative;
+  }
+}
+
 .card {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
     padding: 1rem;
